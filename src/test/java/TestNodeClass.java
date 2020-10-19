@@ -5,49 +5,50 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestNodeClass {
 
     @Test
-    private void creatNode(){
+    void creatNode(){
         Node node = new Node("mainNode");
         assertEquals("mainNode",node.getName());
     }
 
     @Test
-    private void addChildNode(){
+    void addChildNode(){
         Node node = new Node("mainNode");
         Node child = node.addChild("child1");
         assertEquals("child1", child.name);
     }
 
     @Test
-    private void delOfNameNode(){
+    void delOfNameNode(){
         Node node = new Node("mainNode");
         Node child1 = node.addChild("child1");
         Node child2 = node.addChild("child2");
         Node child3 = node.addChild("child3");
-        node.delOfName("child1");
+        node.dellOfName("child1");
         assertNull(node.getNameChild("child1"));
     }
 
     @Test
-    private void delAllNode(){
+    void delAllNode(){
         Node node = new Node("mainNode");
         Node child1 = node.addChild("child1");
         Node child2 = node.addChild("child2");
         Node child3 = node.addChild("child3");
+        Node child4 = node.addChild("child4");
         node.delAllChild();
         assertEquals(0, node.size());
     }
 
     @Test
-    private void searchNode(){
+    void searchNode(){
         Node node = new Node("mainNode");
         Node child1 = node.addChild("child1");
         Node child2 = node.addChild("child2");
         Node child3 = node.addChild("child3");
-        assertTrue(node.serach("child1"));
+        assertTrue(node.search("child1"));
     }
 
     @Test
-    private void changeNode(){
+    void changeNode(){
         Node node = new Node("mainNode");
         Node child1 = node.addChild("child1");
         Node child2 = node.addChild("child2");
